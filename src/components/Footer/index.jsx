@@ -32,9 +32,10 @@ const Footer = () => {
             <li><Link to="/" onClick={(e) => handleLinkClick(e, "/")}>Home</Link></li>
             <li><Link to="/sobre" onClick={(e) => handleLinkClick(e, "/sobre")}>Sobre</Link></li>
             <li><Link to="/especialidades" onClick={(e) => handleLinkClick(e, "/especialidades")}>Especialidades</Link></li>
+            <li><Link to="/cartão" onClick={(e) => handleLinkClick(e, "/cartão")}>Clínica</Link></li>
             <li><Link to="/noticias" onClick={(e) => handleLinkClick(e, "/noticias")}>Notícias</Link></li>
             <li><Link to="/projetos" onClick={(e) => handleLinkClick(e, "/projetos")}>Portal da Transparência</Link></li>
-            <li><Link to="/cartão" onClick={(e) => handleLinkClick(e, "/cartão")}>Clínica Casa de Saúde</Link></li>
+           
           </ul>
         </div>
 
@@ -61,19 +62,24 @@ const Footer = () => {
 
       </div>
 
-      {/* ===== NOVA SEÇÃO DE LOGOS ===== */}
-      <div className={styles.logosSection}>
-        {/*<img src="Novo_Logo.png" alt="São Camilo" />*/}
-        <img src="sec.png" alt="Governo do Estado do Ceará" />
-        <img src="sus.png" alt="SUS" />
-        <img src="especialistas.png" alt="ONA Nível 3" />
-       {/* <img src="logo_cartao.png" alt="Hospital Amigo da Criança" />*/}
-      </div>
+         <   div className={styles.logosSection}>
 
-      <div className={styles.footerBottom}>
-        <p>&copy; {new Date().getFullYear()} Hospital Agenor Araújo  — Desenvolvido por Saulo Silva — Todos os direitos reservados.</p>
-      </div>
+          <div className={styles.logosContainer}>
+            <img src="Novo_Logo.png" alt="hmaa" />
+            <img src="sec.png" alt="Governo do Estado do Ceará" />
+            <img src="sus.png" alt="SUS" />
+            <img src="especialistas.png" alt="Especialistas" />
+          {/*   <img src="logo_cartao.png" alt="Cartão popular" />*/}
+           
+          </div>
 
+          <p className={styles.footerBottom}>
+            &copy; {new Date().getFullYear()} Hospital Agenor Araújo — 
+            Desenvolvido por Saulo Silva — Todos os direitos reservados.
+          </p>
+
+      </div>    
+     
     </footer>
   );
 };

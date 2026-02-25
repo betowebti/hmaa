@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Cartao.module.css";
 
 function Cartao() {
@@ -13,6 +13,19 @@ function Cartao() {
     { id: 7, src: "cli.webp", nome: "Miniatura 7" },
     { id: 8, src: "entrada.webp", nome: "Miniatura 8" },
   ];
+    const [miniaturasVisiveis, setMiniaturasVisiveis] = useState([]);
+
+  useEffect(() => {
+    let index = 0;
+    function carregarProxima() {
+      if (index < imagens.length) {
+        setMiniaturasVisiveis((visiveis) => [...visiveis, imagens[index]]);
+        index++;
+        setTimeout(carregarProxima, 650); 
+      }
+    }
+    carregarProxima();
+  }, []);
 
   return (
     <>
@@ -82,7 +95,7 @@ function Cartao() {
 
         <div className={styles.cardVermelho}>
           <span>1 Titular</span>
-          <strong style={{ marginTop: 6 }}>+ 4 dependentes</strong>
+          <strong style={{ marginTop: 6 }}> + 4 dependentes</strong>
         </div>
 
         <div className={styles.cartaoImagem}>
@@ -133,7 +146,7 @@ function Cartao() {
         <div className={styles.cardVerdeBottom}>
           <div className={styles.cardLogo}>
             <img
-              src="logo_cartao.jpeg"
+              src="logo_cartao.png"
               alt="Logo Clínica"
               loading="lazy"
               decoding="async"

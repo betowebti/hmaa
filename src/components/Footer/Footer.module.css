@@ -15,8 +15,6 @@ html, body, #root {
   padding: 60px 40px 20px 40px;
 }
 
-/* ===== Top Content ===== */
-
 .topContent {
   display: flex;
   justify-content: space-between;
@@ -46,8 +44,6 @@ html, body, #root {
   color: #ccc;
 }
 
-/* ===== Navigation ===== */
-
 .navigation ul {
   list-style: none;
   padding: 0;
@@ -67,8 +63,6 @@ html, body, #root {
 .navigation ul li a:hover {
   color: white;
 }
-
-/* ===== Icons ===== */
 
 .icons {
   text-align: center;
@@ -93,103 +87,51 @@ html, body, #root {
   color: #ddd;
 }
 
-/* ===== Logos Section ===== */
-
 .logosSection {
   width: 100%;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  padding: 4px 0 0px 0;
+  gap: 50px;
+}
+
+.logosContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
-  padding: 40px 0;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.logosSection img {
-  max-height: 70px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.logosSection img:hover {
-  transform: scale(1.05);
-}
-
-/* ===== Footer Bottom ===== */
-
-.footerBottom {
-  width: 100%;
-  text-align: center;
-  padding: 20px 0 0 0;
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-/* ===== RESPONSIVO ===== */
-
-@media (max-width: 768px) {
-
-  .footer {
-    padding: 40px 20px;
-  }
-
-  .topContent {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .information,
-  .navigation,
-  .icons {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  /* ===== Logos Section ===== */
-
-.logosSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  flex-wrap: wrap;
-  padding: 50px 0;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-
-/* PADRONIZA TAMANHO */
-.logosSection img {
-  height: 80px;   /* antes estava 60px */
+.logosContainer img {
+  height: 70px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
   transition: opacity 0.3s ease;
-  gap: 100px;
 }
 
-/* leve efeito hover */
-.logosSection img:hover {
+.logosContainer img:hover {
   opacity: 0.8;
 }
+
+.footerBottom {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
-  .footer {
-    padding: 30px 15px;
+  .logosContainer {
+    flex-direction: column;   
+    flex-wrap: nowrap;        
+    gap: 35px;
   }
 
-  .logosSection {
-  flex-direction: column;
-  gap: 35px;
-}
+  .logosContainer img {
+    height: 60px;
+  }
 
-.logosSection img {
-  height: 50px;
-}
 }
