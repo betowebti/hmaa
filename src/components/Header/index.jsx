@@ -22,7 +22,7 @@ function Header() {
         <Link to='/especialidades'>ESPECIALIDADES</Link>
         <Link to='/cartão'>CLINICA</Link>
         <Link to='/noticias'>NOTICIAS</Link>
-        <Link to='/portal-da-transparencia'>PORTAL DA TRANSPARÊNCIA</Link>
+        <Link to='/projetos'>PORTAL DA TRANSPARÊNCIA</Link>
       </nav>
 
       <div className={styles.menuIcon} onClick={toggleMenu}>
